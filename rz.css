@@ -38,24 +38,27 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.75rem 1rem;
 }
 
+/* Logo */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* jarak antara logo dan teks */
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2563eb;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* jarak logo dan teks */
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2563eb;
+    white-space: nowrap;
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
+/* Navbar links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -91,6 +94,7 @@ nav {
     width: 100%;
 }
 
+/* Mobile menu (hamburger) */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -117,6 +121,38 @@ nav {
 
 .mobile-menu.active span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* sembunyikan menu di mobile */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* tampilkan menu ketika klik hamburger */
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo span {
+        font-size: 1.1rem;
+    }
 }
 
 /* Hero Section */

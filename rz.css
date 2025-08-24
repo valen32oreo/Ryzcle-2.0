@@ -45,17 +45,28 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* jarak logo dan teks */
-    font-size: 1.4rem;
+    gap: 12px; /* jarak logo dan teks */
+    font-size: 1.6rem;  /* ukuran teks lebih besar */
     font-weight: 700;
     color: #2563eb;
     white-space: nowrap;
 }
 
 .logo img {
-    width: 32px;
-    height: 32px;
+    width: 55px;   /* lebih besar */
+    height: 55px;
     object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 45px;  /* sedikit lebih kecil di mobile */
+        height: 45px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
 }
 
 /* Navbar links */
@@ -143,15 +154,6 @@ nav {
 
     .mobile-menu {
         display: flex;
-    }
-
-    .logo img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .logo span {
-        font-size: 1.1rem;
     }
 }
 

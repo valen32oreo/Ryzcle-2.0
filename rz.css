@@ -623,24 +623,45 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     color: white;
-    border-radius: 50%;
-    text-decoration: none;
+    font-size: 24px; /* ukuran Ionicons */
     transition: all 0.3s ease;
-    font-weight: 600;
 }
 
 .social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
 }
 
 footer p {
     color: #64748b;
     font-size: 0.95rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.75rem;
+    }
+
+    .social-links a {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }
 
 /* Animations */
@@ -701,7 +722,7 @@ footer p {
         top: 100%;
         left: 0;
         width: 100%;
-        background: white;
+        background: rgb(255, 255, 255);
         flex-direction: column;
         gap: 0;
         padding: 1rem 0;
@@ -714,8 +735,19 @@ footer p {
     }
 
     .nav-links a {
-        padding: 1rem 2rem;
-        text-align: center;
+    display: block;          /* biar full lebar */
+    padding: 1rem;           /* seragam */
+    text-align: center;      /* rata tengah */
+    text-decoration: none;   /* hilangkan underline */
+    font-size: 1.1rem;       /* lebih enak dibaca */
+    font-weight: 600;        /* agak bold */
+    color: #2563eb;          /* biru */
+    transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: rgba(59, 130, 246, 0.05); /* efek hover */
+        color: #1e40af;                       /* biru lebih gelap pas hover */
     }
 
     .mobile-menu {

@@ -42,17 +42,18 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* jarak antara logo dan teks */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .nav-links {

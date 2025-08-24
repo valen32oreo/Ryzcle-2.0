@@ -735,19 +735,19 @@ footer p {
     }
 
     .nav-links a {
-    display: block;          /* biar full lebar */
-    padding: 1rem;           /* seragam */
-    text-align: center;      /* rata tengah */
-    text-decoration: none;   /* hilangkan underline */
-    font-size: 1.1rem;       /* lebih enak dibaca */
-    font-weight: 600;        /* agak bold */
-    color: #2563eb;          /* biru */
+    display: block;
+    padding: 0.75rem 1rem;   /* lebih kecil */
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.95rem;      /* sedikit lebih kecil */
+    font-weight: 500;        /* tidak terlalu tebal */
+    color: #2563eb;
     transition: all 0.3s ease;
     }
 
     .nav-links a:hover {
-        background: rgba(59, 130, 246, 0.05); /* efek hover */
-        color: #1e40af;                       /* biru lebih gelap pas hover */
+        background: rgba(59, 130, 246, 0.05);
+        color: #1e40af;
     }
 
     .mobile-menu {
